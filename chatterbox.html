@@ -28,7 +28,19 @@
       <div id="rooms">
         Room:
         <select></select>
-        <button>Add Room</button>
+        <button id="addRoom">Add Room</button>
+        <!-- customized popup window for room instantiation. include name of room, password, and submit button -->
+      </div>
+      <div id="roomPrompt">
+        <form>
+          <span>Enter the room name and password of your choice below:</span><br><br>
+
+          <label for="rName">Room Name:</label><br>
+          <input type="text" id="rName" name="rName"><br><br>
+          <label for="pWord">Room Password:</label><br>
+          <input type="password" id="pWord" name="pWord"><br><br>
+          <button id="roomSubmit">Create Room</button>
+        </form>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>

@@ -88,3 +88,15 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+#roomPrompt {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 5px 10px 10px lightgray;
+    z-index: 10;
+    opacity: 0;
+}
