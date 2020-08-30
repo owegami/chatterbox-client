@@ -15,7 +15,7 @@ var MessagesView = {
 
       //put message from messages.storage into html in message view
 
-      console.log(tempDomStr);
+      // console.log(tempDomStr);
 
       //break the first segment of the string after the <div class="username"> store that in some temp variable
       var firstThird = tempDomStr.substring(0, 52);
@@ -23,7 +23,7 @@ var MessagesView = {
       var thirdThird = tempDomStr.substring(83);
       tempDomStr = firstThird + escapeFunction(Messages.storage[i].username) + secondThird + escapeFunction(Messages.storage[i].text) + thirdThird;
 
-      console.log(tempDomStr);
+      // console.log(tempDomStr);
 
       arrayOfDomMessages.push(tempDomStr);
 
@@ -45,8 +45,13 @@ var MessagesView = {
 
   },
 
-  renderMessage: function() {
-    //Json.Stringify message obj
+  renderMessage: function(text, username, room) {
+    //on click of submit button, we'll have our message data pulled from the text box(get id)
+    //it'll be sent here in the format which includs the roomname, username, and text (object)
+    console.log(text, username, room)
+    // use parse.create to send the message data object to the server
+    // use settimeout to put a hold on the readall below
+    //call MessagesView.initialize() to update the page
 
   }
 };
@@ -64,7 +69,7 @@ var escapeFunction = function(string) {
 
   //
   var result = '';
-  var escChars = ['&', '<', '>', '\'', '%', '#', '$', '\\'];
+  var escChars = ['&', '<', '>', '%', '#', '$', '\\'];
 
   for (var i = 0; i < string.length; i++) {
     //if not an escChar
